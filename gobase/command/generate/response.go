@@ -9,7 +9,7 @@ import (
 )
 
 func Response(c *cli.Context) {
-	response := c.Args().Get(2)
+	response := c.Args().Get(0)
 	responseFileName := response + "_response" + ".go"
 	input, err := ioutil.ReadFile("gobase/template/response.go")
 	if err != nil {

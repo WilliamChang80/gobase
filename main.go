@@ -11,7 +11,7 @@ func main() {
 	app := cli.NewApp()
 	app.Name = "gobase"
 	app.Usage = "gobase helper cli"
-	app.Action = command.Command
+	app.Commands = command.GetCommands()
 	err := app.Run(os.Args)
 	if err != nil {
 		log.Fatal(err)

@@ -10,7 +10,7 @@ import (
 )
 
 func Seeder(c *cli.Context) {
-	domain := c.Args().Get(2)
+	domain := c.Args().Get(0)
 	domainFileName := domain + ".go"
 	if !utils.IsFileExist("models/entity", domainFileName) {
 		log.Error(fmt.Sprintf("File %v is Not Exist", domainFileName))

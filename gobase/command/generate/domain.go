@@ -171,7 +171,7 @@ func GenerateMigration(domain string) {
 }
 
 func Domain(c *cli.Context) {
-	domain := c.Args().Get(2)
+	domain := c.Args().Get(0)
 	os.Mkdir("."+string(filepath.Separator)+"domains/"+domain, 0775)
 
 	GenerateRepository(domain)
